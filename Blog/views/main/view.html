@@ -1,0 +1,68 @@
+{% extends 'layout.html'%}
+{%block content%}
+		<div class="listBox">
+			<h1>{{content.title}}</h1>
+			<p class="colDefault">
+				作者：<span class="colInfo">{{content.user.username}}</span>-
+				时间：<span class="colInfo">{{content.addTime|date('Y年m月d日 H:i:s',-8*60)}}</span>-
+				阅读：<span class="colInfo">{{content.views}}</span>-
+				评论：<span class="colInfo">{{content.comments.length}}</span>
+			</p>
+			<P>{{content.description}}</P>
+			<div class="function width">{{content.content}}</div>
+		</div>
+		<div class="commentBox">
+			<div class="commentTop clearfix">
+				<span style="float: left;">评论</span>
+				<span class="messageCount" style="float: right;"></span>
+			</div>
+			{% if  USERINFO.id %}
+			<p class="author">张丹丹</p>
+			<div class="submint clearfix">
+				<textarea class="subInput" id="messageContent"/></textarea>
+				<input type="hidden" value="{{content.id}}" id="contentId" />
+				<button class="sendMsgBtn" id="messageBtn">提交</button>
+			</div>
+			{% else %}
+			<div class="loginTip">
+				你还没有登录，请先登录！
+			</div>
+			{% endif %}
+			<div class="commentConBox">
+				
+				<!--<div class="commentItem">
+					<div class="clearfix">
+						<p class="au fl">admin</p>
+						<p class="commentTime fr">2016年05月25日 17:24:23</p>
+					</div>
+					<div class="commentCon">哈哈哈哈哈哈</div>
+				</div>
+				
+				<div class="commentItem">
+					<div class="clearfix">
+						<p class="au fl">admin</p>
+						<p class="commentTime fr">2016年05月25日 17:24:23</p>
+					</div>
+					<div class="commentCon">哈哈哈哈哈哈</div>
+				</div>-->
+				
+			</div>
+		</div>
+		<div class="pager">
+			<ul class="clear">
+				<li class="previous">
+					<!--<a href="/?page={{page-1}}&category={{category}}">上一页</a>-->
+				</li>
+				
+				<li class="centervious pager">
+					<a href="javascript:;" class="pageList"></a>	
+				</li>
+				
+				<li class="next">
+					<!--<a href="/?page={{page+1}}&category={{category}}">下一页</a>-->
+				</li>
+			</ul>
+		</div>
+	<script src="/public/js/jquery-1.11.3.js"></script>
+	<script src="/public/js/comment.js"></script>
+{%endblock%}

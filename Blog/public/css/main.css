@@ -1,0 +1,170 @@
+body,ul,li,ol,dd,dl,dt,p{margin: 0;padding: 0;}
+html,body{
+	height: 100%;
+}
+body{
+    background: rgb(240,240,240);
+}
+li{list-style: none;}
+
+h3{
+	text-align: center;
+}
+.wrap{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFFFFF;
+	background: #2b2b2b;
+}
+.wrap ul{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.wrap ul li {
+	float: left;
+	margin:0 10px;
+	padding: 0 10px;
+}
+.wrap ul li:hover{
+	background: #008000;
+}
+.wrap ul .fous{
+	background: #008000;
+}
+.wrap ul li a{
+	color: #fff;
+}
+.loginIn,.registerIn{
+	text-align: center;
+}
+#loginBox{
+	width: 300px;
+	margin: 100px auto;
+}
+.btnBox{
+	text-align: center;
+}
+.colMint{
+	color: #008000;
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align:center;
+}
+/*文章内容部分*/
+.containerLeft{
+	width: 70%;
+	float: left;
+	background: #C1E2B3;
+}
+.content{
+	height: 100%;
+	width: 100%;
+}
+.mainLeft{
+	text-align: center;
+	margin: 0 auto;
+	clear: both;
+}
+.function{
+	width: 80px;
+	background: orange;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 50px  auto;
+}
+.function:hover a{
+	text-decoration: underline;
+}
+.function a{
+	color: #fff;
+	text-decoration: none;
+}
+.width{
+	background: #fff;
+	color: #000000;
+	width: 980px;
+	border-radius: none;
+}
+.containerRight{
+	width: 30%;
+	float: right;
+	background: #0196E3;
+}
+.containerRight h1{
+	text-align: center;
+}
+.clear{
+	clear: both;
+}
+.previous{
+	float: left;
+	margin-left: 15px;
+}
+.centervious{
+	text-align: center;
+}
+.nextvious{
+	float:right;
+	margin-right: 15px;
+	
+}
+/*评论*/
+.clearfix:after{clear:both; display:block; content:"";}
+.clearfix{zoom:1}
+
+.fl{float:left}
+
+.fr{float:right}
+.commentBox{
+	width: 980px;
+	margin: 0 auto;
+	height: 500px;
+	background: #F0F0F0;
+	padding: 50px 20px;
+}
+.author{
+	text-align: left;
+	margin: 20px 0;
+	color: #008000;
+}
+.submint{
+	width: 80%;
+}
+.subInput{
+	width: 80%;
+	font-size: 20px;
+	border: 2px solid #007AFF;
+	float: left;
+}
+.sendMsgBtn{
+	height: 54px;
+	background: #0066CC;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	outline:none;
+	border: none;
+	width: 15%;
+	float: left;
+}
+.loginTip{
+	clear: both;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: orangered;
+	color: #fff;
+	margin-top: 15px;
+}
+.commentConBox{
+	text-align: left;
+}
+.commentItem{
+	margin-top: 50px;
+}

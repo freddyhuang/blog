@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        button{
+            width: 20px;
+            height: 20px;
+            background: #000;
+            color: #fff;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <div style="background-color: red;">1</div>
+    <div style="background-color:green">2</div>
+    <div style="background-color:blue">3</div>
+<script>
+    let but = document.getElementsByTagName('button');
+    let div = document.getElementsByTagName('div');
+    for(let i = 0;i<but.length;i++){
+    	console.log(i)
+        but[i].onclick = function(){
+            div[i].style.display = 'block';
+        }
+    }
+    const a = {
+    	name:'freddy'
+    };
+    a.name = '衡水';
+    console.log(a)
+    let [c,[d,e]] = [8,[9]];
+    alert(c);
+    alert(d);
+    alert(e);
+    
+   let obj = {
+        arr:"freddy",
+        str:26
+    };
+    let {arr,str} = obj;
+    console.log(arr);
+    console.log(str);
+    var u = 1;
+    var t = 2;
+    
+    var [u,t] = [t,u];
+    console.log(u);
+    console.log(t);
+    let num = 1;
+    let o = `
+    ${num+1}freddy
+    `;
+    console.log(o);
+    let strs = 'wulv';
+    console.log(strs.startsWith('w'));
+    console.log(strs.endsWith('v'));
+    console.log(strs.repeat(10));
+    let numd = 123.456;
+    console.log(Math.trunc(numd));
+    console.log(Math.sign(5));
+    console.log(Math.hypot(2,3));
+</script>
+</body>
+</html>

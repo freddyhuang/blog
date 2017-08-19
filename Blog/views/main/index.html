@@ -1,0 +1,40 @@
+{% extends 'layout.html'%}
+{%block content%}
+	{% for contents in content %}
+		<div class="listBox">
+			<h1>{{contents.title}}</h1>
+			<p class="colDefault">
+				作者：<span class="colInfo">{{contents.user.username}}</span>-
+				时间：<span class="colInfo">{{contents.addTime|date('Y年m月d日  H:i:s',-8*60)}}</span>-
+				阅读：<span class="colInfo">{{contents.views}}</span>-
+				评论：<span class="colInfo">{{contents.comments.length}}</span>
+			</p>
+			<P>{{contents.description}}</P>
+			<div class="function"><a href="/view?contentid={{contents.id}}">阅读全文</a></div>
+		</div>
+		{% endfor %}
+		<div class="pager">
+			<ul class="clear">
+				<li class="previous">
+					{%if page <=1%}
+					<a href="javascript:;">没有上一页了</a>
+					{%else%}
+					<a href="/?page={{page-1}}&category={{category}}">上一页</a>
+					{%endif%}
+				</li>
+				
+				<li class="centervious">
+					{%if pages >0 %}
+					<a href="javascript:;">{{page}}/{{pages}}</a>
+					{% endif %}
+				</li>
+				<li class="nextvious">
+					{%if page >= pages%}
+					<a href="javascript:;">没有下一页了</a>
+					{%else%}
+					<a href="/?page={{page+1}}&category={{category}}">下一页</a>
+					{%endif%}
+				</li>
+			</ul>
+		</div>
+{%endblock%}
